@@ -7,6 +7,7 @@ import BtnSecondary from "./components/atoms/Buttons/BtnSecondary";
 import BtnSmall from "./components/atoms/Buttons/BtnSmall";
 import BasicInput from "./components/atoms/Inputs/BasicInput";
 import SearchBar from "./components/atoms/Inputs/SearchBar";
+import RadioSelect from "./components/atoms/Inputs/RadioSelect";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <BtnPrimary text="Click me" />
       <BtnSecondary text="Click me harder!" />
       <BtnSmall text="Nice" />
+      <RadioSelect text="A radio option here 😩" isSelected={true} />
     </SafeAreaView>
   );
 }

@@ -45,8 +45,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   text_input: {
-    color: colours.grey,
-    ...fonts.MedMedium,
+    width: "100%",
+    color: colours.black,
+    ...fonts.MedRegular,
   },
 });
 

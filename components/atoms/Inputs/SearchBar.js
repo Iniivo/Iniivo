@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   text_input: {
+    width: "100%",
     color: colours.grey,
     ...fonts.MedMedium,
   },
