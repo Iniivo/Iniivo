@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Button, TouchableOpacity } from "react-native";
 import colours from "../../../themes/colours";
+import fonts from "../../../themes/fonts";
 
 const BtnPrimary = ({ text, onPress }) => {
   return (
@@ -21,6 +22,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colours.white,
+    ...fonts.MedBold,
   },
 });
 
