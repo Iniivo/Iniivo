@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
-import colours from "../../themes/colours";
-import fonts from "../../themes/fonts";
-import opacities from "../../themes/opacities";
+import colours from "../../../themes/colours";
+import fonts from "../../../themes/fonts";
+import opacities from "../../../themes/opacities";
 import {
   useFonts,
   DMSans_400Regular,
@@ -10,7 +10,7 @@ import {
   DMSans_700Bold,
 } from "@expo-google-fonts/dm-sans";
 
-const BtnPrimary = ({ text, onPress, style }) => {
+const BtnSmall = ({ text, onPress, style }) => {
   let [fontsLoaded] = useFonts({
     DMSans_400Regular,
     DMSans_500Medium,
@@ -26,7 +26,7 @@ const BtnPrimary = ({ text, onPress, style }) => {
         onPress={onPress}
         style={[styles.btn, style]}
       >
-        <Text style={[styles.text, text]}>{text}</Text>
+        <Text style={styles.text}>{text}</Text>
       </TouchableOpacity>
     );
   }
@@ -34,17 +34,17 @@ const BtnPrimary = ({ text, onPress, style }) => {
 
 const styles = StyleSheet.create({
   btn: {
-    width: "100%",
-    height: 50,
-    borderRadius: 25,
-    backgroundColor: colours.primary,
+    width: 160,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: colours.light_grey,
     justifyContent: "center",
     alignItems: "center",
   },
   text: {
-    color: colours.white,
+    color: colours.primary,
     ...fonts.MedBold,
   },
 });
 
-export default BtnPrimary;
+export default BtnSmall;
