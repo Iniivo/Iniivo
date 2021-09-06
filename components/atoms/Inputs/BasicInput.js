@@ -10,7 +10,7 @@ import {
   DMSans_700Bold,
 } from "@expo-google-fonts/dm-sans";
 
-const SearchBar = ({ placeholder, onChange }) => {
+const BasicInput = ({ placeholder, onChange }) => {
   let [fontsLoaded] = useFonts({
     DMSans_400Regular,
     DMSans_500Medium,
@@ -35,9 +35,11 @@ const SearchBar = ({ placeholder, onChange }) => {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    height: 60,
-    borderRadius: 30,
+    height: 50,
+    borderRadius: 10,
     backgroundColor: colours.light_grey,
+    borderColor: "#C8C8C8",
+    borderWidth: 3,
     alignItems: "center",
     paddingHorizontal: 20,
     flexDirection: "row",
@@ -48,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SearchBar;
+export default BasicInput;
