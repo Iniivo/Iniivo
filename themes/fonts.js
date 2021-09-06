@@ -1,16 +1,3 @@
-import {
-  useFonts,
-  DMSans_400Regular,
-  DMSans_500Medium,
-  DMSans_700Bold,
-} from "@expo-google-fonts/dm-sans";
-
-let [fontsLoaded] = useFonts({
-  DMSans_400Regular,
-  DMSans_500Medium,
-  DMSans_700Bold,
-});
-
 const fonts = {
   BigBold: {
     fontSize: 30,
