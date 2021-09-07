@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 
@@ -14,7 +13,6 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       {/* <Text>Open up App.js to start working on your app!</Text> */}
-      <StatusBar style="auto" />
       <SearchBar placeholder="Find listings (city, address, etc.)..." />
       <BasicInput placeholder="Enter email here..." />
       <BtnPrimary text="Click me" />
@@ -30,8 +28,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    paddingTop: 37,
     paddingLeft: 16,
     paddingRight: 16,
-    paddingTop: 37 * 2,
   },
 });
