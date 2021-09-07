@@ -3,14 +3,10 @@ import { StyleSheet, View, Text, TextInput } from "react-native";
 import colours from "../../../themes/colours";
 import fonts from "../../../themes/fonts";
 
-const BasicInput = ({ placeholder, onChange }) => {
+const BasicInput = (props) => {
   return (
     <View style={styles.container}>
-      <TextInput
-        style={styles.text_input}
-        placeholder={placeholder}
-        onChange={onChange}
-      />
+      <TextInput style={styles.text_input} {...props} />
     </View>
   );
 };

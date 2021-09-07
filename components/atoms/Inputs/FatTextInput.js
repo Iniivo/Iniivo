@@ -3,14 +3,13 @@ import { StyleSheet, View, Text, TextInput } from "react-native";
 import colours from "../../../themes/colours";
 import { Platform } from "react-native";
 
-const FatTextInput = ({ placeholder, onChange }) => {
+const FatTextInput = (props) => {
   return (
     <View style={styles.container}>
       <TextInput
         keyboardType={Platform.OS === "android" ? "numeric" : "number-pad"}
         style={styles.text_input}
-        placeholder={placeholder}
-        onChange={onChange}
+        {...props}
       />
     </View>
   );

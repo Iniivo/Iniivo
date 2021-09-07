@@ -19,15 +19,27 @@ const Signup = () => {
         <View style={styles.input_group}>
           <View>
             <Text style={styles.input_title}>What’s your first name?</Text>
-            <BasicInput placeholder="Enter your first name here ..." />
+            <BasicInput
+              placeholder="Enter your first name here ..."
+              value={firstName}
+              onChangeText={setFirstName}
+            />
           </View>
           <View>
             <Text style={styles.input_title}>What’s your last name?</Text>
-            <BasicInput placeholder="Enter your last name here ..." />
+            <BasicInput
+              placeholder="Enter your last name here ..."
+              value={lastName}
+              onChangeText={setLastName}
+            />
           </View>
           <View>
             <Text style={styles.input_title}>Finally, your email address?</Text>
-            <BasicInput placeholder="Enter your email here ..." />
+            <BasicInput
+              placeholder="Enter your email here ..."
+              value={email}
+              onChangeText={setEmail}
+            />
           </View>
         </View>
       </View>
