@@ -7,43 +7,38 @@ import fonts from "../themes/fonts";
 import BtnPrimary from "../components/atoms/Buttons/BtnPrimary";
 import BasicInput from "../components/atoms/Inputs/BasicInput";
 
-const Signup = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
+const RegisterPassword = () => {
+  const [pwd, setPwd] = useState("");
+  const [pwdConfirm, setPwdConfirm] = useState("");
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.input_container}>
         <View>
-          <Text style={styles.title}>Signup</Text>
+          <Text style={styles.title}>Almost there...</Text>
           <Text style={{ ...fonts.MedRegular, color: colours.grey }}>
-            Make your Iniivo account today!
+            The most important part!
           </Text>
         </View>
         <View style={styles.input_group}>
           <View>
-            <Text style={styles.input_title}>What’s your first name?</Text>
+            <Text style={styles.input_title}>
+              Create a password (at least 6 characters)
+            </Text>
             <BasicInput
-              placeholder="Enter your first name here ..."
-              value={firstName}
-              onChangeText={setFirstName}
+              placeholder="Password"
+              value={pwd}
+              onChangeText={setPwd}
             />
           </View>
           <View>
-            <Text style={styles.input_title}>What’s your last name?</Text>
+            <Text style={styles.input_title}>
+              Reenter your amazing password
+            </Text>
             <BasicInput
-              placeholder="Enter your last name here ..."
-              value={lastName}
-              onChangeText={setLastName}
-            />
-          </View>
-          <View>
-            <Text style={styles.input_title}>Finally, your email address?</Text>
-            <BasicInput
-              placeholder="Enter your email here ..."
-              value={email}
-              onChangeText={setEmail}
+              placeholder="Your password, again"
+              value={pwdConfirm}
+              onChangeText={setPwdConfirm}
             />
           </View>
         </View>
@@ -51,7 +46,6 @@ const Signup = () => {
       <View
         style={{ paddingTop: 37, paddingHorizontal: 16, paddingBottom: 16 }}
       >
-        <Text style={styles.account_prompt}>Already have an account?</Text>
         <BtnPrimary text="Next" />
       </View>
     </SafeAreaView>
@@ -87,11 +81,6 @@ const styles = StyleSheet.create({
     color: colours.black,
     ...fonts.MedMedium,
   },
-  account_prompt: {
-    color: colours.primary,
-    marginBottom: 10,
-    ...fonts.MedMedium,
-  },
 });
 
-export default Signup;
+export default RegisterPassword;

@@ -9,6 +9,7 @@ import SearchBar from "./components/atoms/Inputs/SearchBar";
 import RadioSelect from "./components/atoms/Inputs/RadioSelect";
 import FatTextInput from "./components/atoms/Inputs/FatTextInput";
 import Signup from "./screens/Signup";
+import RegisterPassword from "./screens/RegisterPassword";
 
 import fonts from "./themes/fonts";
 import {
@@ -27,21 +28,22 @@ export default function App() {
 
   if (fontsLoaded) {
     return (
-      <SafeAreaView style={styles.container}>
-        {/* <Text>Open up App.js to start working on your app!</Text> */}
-        <Text style={{ ...fonts.BigBold }}>Iniivo</Text>
-        <Text style={{ ...fonts.MedMedium }}>
-          Invest in homes for as little as $10.
-        </Text>
-        <SearchBar placeholder="Find listings (city, address, etc.)..." />
-        <BasicInput placeholder="Enter email here..." />
-        <BtnPrimary text="Click me" />
-        <BtnSecondary text="Click me!" />
-        <BtnSmall text="Nice" />
-        <RadioSelect text="A radio option here 😩" isSelected={true} />
-        <FatTextInput placeholder="0" />
-      </SafeAreaView>
+      // <SafeAreaView style={styles.container}>
+      //   {/* <Text>Open up App.js to start working on your app!</Text> */}
+      //   <Text style={{ ...fonts.BigBold }}>Iniivo</Text>
+      //   <Text style={{ ...fonts.MedMedium }}>
+      //     Invest in homes for as little as $10.
+      //   </Text>
+      //   <SearchBar placeholder="Find listings (city, address, etc.)..." />
+      //   <BasicInput placeholder="Enter email here..." />
+      //   <BtnPrimary text="Click me" />
+      //   <BtnSecondary text="Click me!" />
+      //   <BtnSmall text="Nice" />
+      //   <RadioSelect text="A radio option here 😩" isSelected={true} />
+      //   <FatTextInput placeholder="0" />
+      // </SafeAreaView>
       // <Signup />
+      <RegisterPassword />
     );
   } else {
     return <Text>Loading...</Text>;
