@@ -3,33 +3,16 @@ import { StyleSheet, View, Text, TextInput } from "react-native";
 import colours from "../../../themes/colours";
 import fonts from "../../../themes/fonts";
 
-import {
-  useFonts,
-  DMSans_400Regular,
-  DMSans_500Medium,
-  DMSans_700Bold,
-} from "@expo-google-fonts/dm-sans";
-
 const BasicInput = ({ placeholder, onChange }) => {
-  let [fontsLoaded] = useFonts({
-    DMSans_400Regular,
-    DMSans_500Medium,
-    DMSans_700Bold,
-  });
-
-  if (!fontsLoaded) {
-    return <Text>Loading</Text>;
-  } else {
-    return (
-      <View style={styles.container}>
-        <TextInput
-          style={styles.text_input}
-          placeholder={placeholder}
-          onChange={onChange}
-        />
-      </View>
-    );
-  }
+  return (
+    <View style={styles.container}>
+      <TextInput
+        style={styles.text_input}
+        placeholder={placeholder}
+        onChange={onChange}
+      />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({

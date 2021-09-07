@@ -11,25 +11,15 @@ import {
 } from "@expo-google-fonts/dm-sans";
 
 const BtnSmall = ({ text, onPress, style }) => {
-  let [fontsLoaded] = useFonts({
-    DMSans_400Regular,
-    DMSans_500Medium,
-    DMSans_700Bold,
-  });
-
-  if (!fontsLoaded) {
-    return <Text>Loading</Text>;
-  } else {
-    return (
-      <TouchableOpacity
-        activeOpacity={opacities.btnOpacity}
-        onPress={onPress}
-        style={[styles.btn, style]}
-      >
-        <Text style={styles.text}>{text}</Text>
-      </TouchableOpacity>
-    );
-  }
+  return (
+    <TouchableOpacity
+      activeOpacity={opacities.btnOpacity}
+      onPress={onPress}
+      style={[styles.btn, style]}
+    >
+      <Text style={styles.text}>{text}</Text>
+    </TouchableOpacity>
+  );
 };
 
 const styles = StyleSheet.create({

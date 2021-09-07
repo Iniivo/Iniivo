@@ -2,35 +2,20 @@ import React from "react";
 import { StyleSheet, TouchableOpacity, View, Text } from "react-native";
 import colours from "../../../themes/colours";
 import opacities from "../../../themes/opacities";
-import {
-  useFonts,
-  DMSans_400Regular,
-  DMSans_500Medium,
-  DMSans_700Bold,
-} from "@expo-google-fonts/dm-sans";
 import fonts from "../../../themes/fonts";
 
 const RadioSelect = ({ text, style, isSelected }) => {
-  let [fontsLoaded] = useFonts({
-    DMSans_400Regular,
-    DMSans_500Medium,
-    DMSans_700Bold,
-  });
-  if (!fontsLoaded) {
-    return <Text>Loading</Text>;
-  } else {
-    return (
-      <TouchableOpacity
-        activeOpacity={opacities.radioOpacity}
-        style={[styles.container, style]}
-      >
-        <Text style={styles.select_text}>{text}</Text>
-        <View style={styles.circle_outer}>
-          {isSelected && <View style={styles.circle_inner}></View>}
-        </View>
-      </TouchableOpacity>
-    );
-  }
+  return (
+    <TouchableOpacity
+      activeOpacity={opacities.radioOpacity}
+      style={[styles.container, style]}
+    >
+      <Text style={styles.select_text}>{text}</Text>
+      <View style={styles.circle_outer}>
+        {isSelected && <View style={styles.circle_inner}></View>}
+      </View>
+    </TouchableOpacity>
+  );
 };
 
 const styles = StyleSheet.create({

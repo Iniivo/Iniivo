@@ -9,24 +9,40 @@ import SearchBar from "./components/atoms/Inputs/SearchBar";
 import RadioSelect from "./components/atoms/Inputs/RadioSelect";
 import FatTextInput from "./components/atoms/Inputs/FatTextInput";
 import fonts from "./themes/fonts";
+import {
+  useFonts,
+  DMSans_400Regular,
+  DMSans_500Medium,
+  DMSans_700Bold,
+} from "@expo-google-fonts/dm-sans";
 
 export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      {/* <Text>Open up App.js to start working on your app!</Text> */}
-      <Text style={{ ...fonts.BigBold }}>Iniivo</Text>
-      <Text style={{ ...fonts.MedMedium }}>
-        Invest in homes for as little as $10.
-      </Text>
-      <SearchBar placeholder="Find listings (city, address, etc.)..." />
-      <BasicInput placeholder="Enter email here..." />
-      <BtnPrimary text="Click me" />
-      <BtnSecondary text="Click me!" />
-      <BtnSmall text="Nice" />
-      <RadioSelect text="A radio option here 😩" isSelected={true} />
-      <FatTextInput placeholder="0" />
-    </SafeAreaView>
-  );
+  let [fontsLoaded] = useFonts({
+    DMSans_400Regular,
+    DMSans_500Medium,
+    DMSans_700Bold,
+  });
+
+  if (fontsLoaded) {
+    return (
+      <SafeAreaView style={styles.container}>
+        {/* <Text>Open up App.js to start working on your app!</Text> */}
+        <Text style={{ ...fonts.BigBold }}>Iniivo</Text>
+        <Text style={{ ...fonts.MedMedium }}>
+          Invest in homes for as little as $10.
+        </Text>
+        <SearchBar placeholder="Find listings (city, address, etc.)..." />
+        <BasicInput placeholder="Enter email here..." />
+        <BtnPrimary text="Click me" />
+        <BtnSecondary text="Click me!" />
+        <BtnSmall text="Nice" />
+        <RadioSelect text="A radio option here 😩" isSelected={true} />
+        <FatTextInput placeholder="0" />
+      </SafeAreaView>
+    );
+  } else {
+    return <Text>Loading...</Text>;
+  }
 }
 
 const styles = StyleSheet.create({
