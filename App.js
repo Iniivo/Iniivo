@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, StatusBar } from "react-native";
 
 import BtnPrimary from "./components/atoms/Buttons/BtnPrimary";
 import BtnSecondary from "./components/atoms/Buttons/BtnSecondary";
@@ -8,11 +8,16 @@ import BasicInput from "./components/atoms/Inputs/BasicInput";
 import SearchBar from "./components/atoms/Inputs/SearchBar";
 import RadioSelect from "./components/atoms/Inputs/RadioSelect";
 import FatTextInput from "./components/atoms/Inputs/FatTextInput";
+import fonts from "./themes/fonts";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       {/* <Text>Open up App.js to start working on your app!</Text> */}
+      <Text style={{ ...fonts.BigBold }}>Iniivo</Text>
+      <Text style={{ ...fonts.MedMedium }}>
+        Invest in homes for as little as $10.
+      </Text>
       <SearchBar placeholder="Find listings (city, address, etc.)..." />
       <BasicInput placeholder="Enter email here..." />
       <BtnPrimary text="Click me" />
@@ -27,7 +32,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    height: "100%",
+    justifyContent: "space-between",
     backgroundColor: "#fff",
+    marginTop: StatusBar.currentHeight,
     paddingTop: 37,
     paddingLeft: 16,
     paddingRight: 16,
