@@ -3,12 +3,6 @@ import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import colours from "../../../themes/colours";
 import fonts from "../../../themes/fonts";
 import opacities from "../../../themes/opacities";
-import {
-  useFonts,
-  DMSans_400Regular,
-  DMSans_500Medium,
-  DMSans_700Bold,
-} from "@expo-google-fonts/dm-sans";
 
 const BtnSmall = ({ text, onPress, style }) => {
   return (

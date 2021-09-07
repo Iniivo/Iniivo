@@ -8,6 +8,8 @@ import BasicInput from "./components/atoms/Inputs/BasicInput";
 import SearchBar from "./components/atoms/Inputs/SearchBar";
 import RadioSelect from "./components/atoms/Inputs/RadioSelect";
 import FatTextInput from "./components/atoms/Inputs/FatTextInput";
+import Signup from "./screens/Signup";
+
 import fonts from "./themes/fonts";
 import {
   useFonts,
@@ -39,6 +41,7 @@ export default function App() {
         <RadioSelect text="A radio option here 😩" isSelected={true} />
         <FatTextInput placeholder="0" />
       </SafeAreaView>
+      // <Signup />
     );
   } else {
     return <Text>Loading...</Text>;
