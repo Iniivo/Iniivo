@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text, SafeAreaView, StatusBar } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  SafeAreaView,
+  StatusBar,
+  TouchableOpacity,
+} from "react-native";
 
 import colours from "../themes/colours";
 import fonts from "../themes/fonts";
@@ -10,6 +17,7 @@ import BasicInput from "../components/atoms/Inputs/BasicInput";
 const RegisterPassword = () => {
   const [pwd, setPwd] = useState("");
   const [pwdConfirm, setPwdConfirm] = useState("");
+  const [select, setSelect] = useState(true);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -41,6 +49,18 @@ const RegisterPassword = () => {
               onChangeText={setPwdConfirm}
             />
           </View>
+          <TouchableOpacity
+            activeOpacity={1}
+            style={styles.select_container}
+            onPress={() => setSelect(!select)}
+          >
+            <View style={styles.select_box}>
+              {select && <View style={styles.select_inner}></View>}
+            </View>
+            <Text style={{ ...fonts.MedRegular }}>
+              I have read and agreed to Iniivo’s Terms and Conditions
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
       <View
@@ -80,6 +100,25 @@ const styles = StyleSheet.create({
     marginBottom: 13,
     color: colours.black,
     ...fonts.MedMedium,
+  },
+  select_container: {
+    flexDirection: "row",
+  },
+  select_box: {
+    width: 30,
+    height: 30,
+    borderRadius: 10,
+    borderColor: colours.primary,
+    borderWidth: 3,
+    marginRight: 20,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  select_inner: {
+    width: 20,
+    height: 20,
+    backgroundColor: colours.primary,
+    borderRadius: 6,
   },
 });
 
