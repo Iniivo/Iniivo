@@ -36,7 +36,6 @@ const Login = () => {
               onChangeText={setPasswordInput}
             />
           </View>
-          <View></View>
         </View>
       </View>
       <View style={styles.buttonbuttonContainer}>
