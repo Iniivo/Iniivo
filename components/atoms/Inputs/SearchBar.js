@@ -1,28 +1,26 @@
-import React from "react";
-import { StyleSheet, View, Text, TextInput } from "react-native";
-import colours from "../../../themes/colours";
-import fonts from "../../../themes/fonts";
+import React from 'react';
+import { StyleSheet, View, TextInput } from 'react-native';
+import colours from '../../../themes/colours';
+import fonts from '../../../themes/fonts';
 
-const SearchBar = (props) => {
-  return (
-    <View style={styles.container}>
-      <TextInput style={styles.text_input} {...props} />
-    </View>
-  );
+const SearchBar = ({ value, onChange }) => {
+  <View style={styles.container}>
+    <TextInput style={styles.text_input} value={value} onChange={onChange} />
+  </View>;
 };
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
+    width: '100%',
     height: 60,
     borderRadius: 30,
     backgroundColor: colours.light_grey,
-    alignItems: "center",
+    alignItems: 'center',
     paddingHorizontal: 20,
-    flexDirection: "row",
+    flexDirection: 'row',
   },
   text_input: {
-    width: "100%",
+    width: '100%',
     color: colours.grey,
     ...fonts.MedMedium,
   },

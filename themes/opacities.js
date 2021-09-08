@@ -1,5 +1,5 @@
 const opacities = {
-  btnOpacity: 0.3,
+  btnOpacity: 0.6,
   radioOpacity: 0.7,
 };
 

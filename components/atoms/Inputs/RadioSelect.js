@@ -1,29 +1,27 @@
-import React from "react";
-import { StyleSheet, TouchableOpacity, View, Text } from "react-native";
-import colours from "../../../themes/colours";
-import opacities from "../../../themes/opacities";
-import fonts from "../../../themes/fonts";
+import React from 'react';
+import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
+import colours from '../../../themes/colours';
+import opacities from '../../../themes/opacities';
+import fonts from '../../../themes/fonts';
 
 const RadioSelect = ({ text, style, isSelected }) => {
-  return (
-    <TouchableOpacity
-      activeOpacity={opacities.radioOpacity}
-      style={[styles.container, style]}
-    >
-      <Text style={styles.select_text}>{text}</Text>
-      <View style={styles.circle_outer}>
-        {isSelected && <View style={styles.circle_inner}></View>}
-      </View>
-    </TouchableOpacity>
-  );
+  <TouchableOpacity
+    activeOpacity={opacities.radioOpacity}
+    style={[styles.container, style]}
+  >
+    <Text style={styles.select_text}>{text}</Text>
+    <View style={styles.circle_outer}>
+      {isSelected && <View style={styles.circle_inner} />}
+    </View>
+  </TouchableOpacity>;
 };
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
+    width: '100%',
     height: 34,
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     borderBottomWidth: 2,
     borderBottomColor: colours.grey,
   },
@@ -37,8 +35,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 10,
     borderColor: colours.primary,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   circle_inner: {
     width: 12,

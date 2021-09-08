@@ -1,23 +1,24 @@
-import React from "react";
-import { StyleSheet, Text, View, SafeAreaView, StatusBar } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View, SafeAreaView, StatusBar } from 'react-native';
 
-import BtnPrimary from "./components/atoms/Buttons/BtnPrimary";
-import BtnSecondary from "./components/atoms/Buttons/BtnSecondary";
-import BtnSmall from "./components/atoms/Buttons/BtnSmall";
-import BasicInput from "./components/atoms/Inputs/BasicInput";
-import SearchBar from "./components/atoms/Inputs/SearchBar";
-import RadioSelect from "./components/atoms/Inputs/RadioSelect";
-import FatTextInput from "./components/atoms/Inputs/FatTextInput";
-import Signup from "./screens/Signup";
-import RegisterPassword from "./screens/RegisterPassword";
+import BtnPrimary from './components/atoms/Buttons/BtnPrimary';
+import BtnSecondary from './components/atoms/Buttons/BtnSecondary';
+import BtnSmall from './components/atoms/Buttons/BtnSmall';
+import BasicInput from './components/atoms/Inputs/BasicInput';
+import SearchBar from './components/atoms/Inputs/SearchBar';
+import RadioSelect from './components/atoms/Inputs/RadioSelect';
+import FatTextInput from './components/atoms/Inputs/FatTextInput';
+import Signup from './screens/Signup';
+import RegisterPassword from './screens/RegisterPassword';
 
-import fonts from "./themes/fonts";
+import fonts from './themes/fonts';
 import {
   useFonts,
   DMSans_400Regular,
   DMSans_500Medium,
   DMSans_700Bold,
-} from "@expo-google-fonts/dm-sans";
+} from '@expo-google-fonts/dm-sans';
+import Login from './screens/Login';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -41,8 +42,12 @@ export default function App() {
       //   <BtnSmall text="Nice" />
       //   <RadioSelect text="A radio option here 😩" isSelected={true} />
       //   <FatTextInput placeholder="0" />
-      // </SafeAreaView>
+      //</SafeAreaView>
+
+      // Screens
+
       // <Signup />
+      // <Login />
       <RegisterPassword />
     );
   } else {
@@ -53,9 +58,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: "100%",
-    justifyContent: "space-between",
-    backgroundColor: "#fff",
+    height: '100%',
+    justifyContent: 'space-between',
+    backgroundColor: '#fff',
     marginTop: StatusBar.currentHeight,
     paddingTop: 37,
     paddingLeft: 16,
