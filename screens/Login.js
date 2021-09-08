@@ -9,8 +9,8 @@ import BasicInput from '../components/atoms/Inputs/BasicInput';
 import BtnSmall from '../components/atoms/Buttons/BtnSmall';
 
 const Login = () => {
-  const [passwordInput, setPasswordInput] = useState('');
-  const [emailInput, setEmailInput] = useState('');
+  const [PasswordInput, setPasswordInput] = useState('');
+  const [EmailInput, setEmailInput] = useState('');
 
   return (
     <SafeAreaView style={styles.container}>
@@ -24,7 +24,7 @@ const Login = () => {
             <Text style={styles.input_title}>What’s your email?</Text>
             <BasicInput
               placeholder="Enter your email here ..."
-              value={emailInput}
+              value={EmailInput}
               onChangeText={setEmailInput}
             />
           </View>
@@ -32,7 +32,7 @@ const Login = () => {
             <Text style={styles.input_title}>What’s your password?</Text>
             <BasicInput
               placeholder="Enter your email here ..."
-              value={passwordInput}
+              value={PasswordInput}
               onChangeText={setPasswordInput}
             />
           </View>
@@ -86,12 +86,14 @@ const styles = StyleSheet.create({
     color: colours.black,
     ...fonts.MedMedium,
   },
+
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingBottom: 50,
     marginBottom: 100,
   },
+
   buttonbuttonContainer: {
     bottom: 50,
     paddingLeft: 16,
