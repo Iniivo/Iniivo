@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, StatusBar } from 'react-native';
 
+// components
 import BtnPrimary from './components/atoms/Buttons/BtnPrimary';
 import BtnSecondary from './components/atoms/Buttons/BtnSecondary';
 import BtnSmall from './components/atoms/Buttons/BtnSmall';
@@ -8,11 +9,14 @@ import BasicInput from './components/atoms/Inputs/BasicInput';
 import SearchBar from './components/atoms/Inputs/SearchBar';
 import RadioSelect from './components/atoms/Inputs/RadioSelect';
 import FatTextInput from './components/atoms/Inputs/FatTextInput';
+import InvestmentView from './components/molecules/InvestmentView';
 
+// screens
 import Signup from './screens/Signup';
 import RegisterPassword from './screens/RegisterPassword';
 import Login from './screens/Login';
 import VerifyEmail from './screens/VerifyEmail';
+import Home from './screens/Home';
 
 import fonts from './themes/fonts';
 import {
@@ -52,6 +56,7 @@ export default function App() {
       // <Login />
       // <RegisterPassword />
       // <VerifyEmail />
+      <Home />
     );
   } else {
     return <Text>Loading...</Text>;
