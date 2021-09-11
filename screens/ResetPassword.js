@@ -8,7 +8,7 @@ import fonts from '../themes/fonts';
 
 import BtnPrimary from '../components/atoms/Buttons/BtnPrimary';
 import BasicInput from '../components/atoms/Inputs/BasicInput';
-import BtnSmall from '../components/atoms/Buttons/BtnSmall';
+
 
 const ResetPassword = () => {
   const [newPassword, setnewPassword] = useState('');
@@ -39,8 +39,8 @@ const ResetPassword = () => {
           </View>
         </ScrollView>
         <BtnPrimary
-          text="Login"
-          onPress={() => console.log('hello')}
+          text="Reset Password"
+          onPress={() => console.log('Reset password')}
           style={{ marginTop: 16 }}
         />
       </View>
