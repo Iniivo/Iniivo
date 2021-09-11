@@ -1,52 +1,48 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   StyleSheet,
   View,
   Text,
-  SafeAreaView,
-  StatusBar,
+  ScrollView,
   TouchableOpacity,
-} from "react-native";
+} from 'react-native';
 
-import colours from "../themes/colours";
-import fonts from "../themes/fonts";
+import Screen from '../components/misc/Screen';
 
-import BtnPrimary from "../components/atoms/Buttons/BtnPrimary";
-import BasicInput from "../components/atoms/Inputs/BasicInput";
+import colours from '../themes/colours';
+import fonts from '../themes/fonts';
+
+import BtnPrimary from '../components/atoms/Buttons/BtnPrimary';
+import BasicInput from '../components/atoms/Inputs/BasicInput';
 
 const RegisterPassword = () => {
-  const [pwd, setPwd] = useState("");
-  const [pwdConfirm, setPwdConfirm] = useState("");
-  const [select, setSelect] = useState(true);
+  const [password, setPassword] = useState('');
+  const [redoPwd, setRedoPwd] = useState('');
+  const [select, setSelect] = useState('');
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.input_container}>
-        <View>
-          <Text style={styles.title}>Almost there...</Text>
-          <Text style={{ ...fonts.MedRegular, color: colours.grey }}>
-            The most important part!
-          </Text>
-        </View>
-        <View style={styles.input_group}>
-          <View>
+    <Screen variant={false}>
+      <View style={styles.container}>
+        <ScrollView>
+          <Text style={styles.title}>Sign Up</Text>
+          <View style={styles.input_group}>
             <Text style={styles.input_title}>
               Create a password (at least 6 characters)
             </Text>
             <BasicInput
               placeholder="Password"
-              value={pwd}
-              onChangeText={setPwd}
+              value={password}
+              onChangeText={setPassword}
             />
           </View>
-          <View>
+          <View style={styles.input_group}>
             <Text style={styles.input_title}>
               Reenter your amazing password
             </Text>
             <BasicInput
               placeholder="Your password, again"
-              value={pwdConfirm}
-              onChangeText={setPwdConfirm}
+              value={redoPwd}
+              onChangeText={setRedoPwd}
             />
           </View>
           <TouchableOpacity
@@ -61,48 +57,38 @@ const RegisterPassword = () => {
               I have read and agreed to Iniivo’s Terms and Conditions
             </Text>
           </TouchableOpacity>
-        </View>
+        </ScrollView>
+        <BtnPrimary
+          text="Next"
+          onPress={() => console.log('hello')}
+          style={{ marginTop: 16 }}
+        />
       </View>
-      <View
-        style={{ paddingTop: 37, paddingHorizontal: 16, paddingBottom: 16 }}
-      >
-        <BtnPrimary text="Next" />
-      </View>
-    </SafeAreaView>
+    </Screen>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: "100%",
-    justifyContent: "space-between",
-    backgroundColor: "#fff",
-    marginTop: StatusBar.currentHeight,
-  },
-  input_container: {
-    minHeight: 450,
-    justifyContent: "space-between",
-    paddingTop: 37,
-    paddingHorizontal: 16,
-    paddingBottom: 16,
+    justifyContent: 'space-between',
+    height: '100%',
   },
   title: {
     color: colours.black,
-    marginBottom: 10,
     ...fonts.BigBold,
-  },
-  input_group: {
-    height: 300,
-    justifyContent: "space-between",
+    marginBottom: 40,
   },
   input_title: {
-    marginBottom: 13,
     color: colours.black,
     ...fonts.MedMedium,
+    marginBottom: 10,
+  },
+  input_group: {
+    marginBottom: 50,
   },
   select_container: {
-    flexDirection: "row",
+    flexDirection: 'row',
   },
   select_box: {
     width: 30,
@@ -111,8 +97,8 @@ const styles = StyleSheet.create({
     borderColor: colours.primary,
     borderWidth: 3,
     marginRight: 20,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   select_inner: {
     width: 20,
