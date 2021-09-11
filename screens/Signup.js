@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, SafeAreaView, StatusBar } from 'react-native';
+import { StyleSheet, View, Text, ScrollView } from 'react-native';
+
+import Screen from '../components/misc/Screen';
 
 import colours from '../themes/colours';
 import fonts from '../themes/fonts';
@@ -13,84 +15,63 @@ const Signup = () => {
   const [email, setEmail] = useState('');
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.input_container}>
-        <View>
-          <Text style={styles.title}>Signup</Text>
-          <Text style={{ ...fonts.MedRegular, color: colours.grey }}>
-            Make your Iniivo account today!
-          </Text>
-        </View>
-        <View style={styles.input_group}>
-          <View>
-            <Text style={styles.input_title}>What’s your first name?</Text>
+    <Screen variant={false}>
+      <View style={styles.container}>
+        <ScrollView>
+          <Text style={styles.title}>Sign Up</Text>
+          <View style={styles.input_group}>
+            <Text style={styles.input_title}>What's your first name?</Text>
             <BasicInput
-              placeholder="Enter your first name here ..."
+              placeholder="Enter your first name..."
               value={firstName}
               onChangeText={setFirstName}
             />
           </View>
-          <View>
-            <Text style={styles.input_title}>What’s your last name?</Text>
+          <View style={styles.input_group}>
+            <Text style={styles.input_title}>What's your last name?</Text>
             <BasicInput
-              placeholder="Enter your last name here ..."
+              placeholder="Enter your last name..."
               value={lastName}
               onChangeText={setLastName}
             />
           </View>
-          <View>
+          <View style={styles.input_group}>
             <Text style={styles.input_title}>Finally, your email address?</Text>
             <BasicInput
-              placeholder="Enter your email here ..."
+              placeholder="Enter your email address..."
               value={email}
               onChangeText={setEmail}
             />
           </View>
-        </View>
+        </ScrollView>
+        <BtnPrimary
+          text="Next"
+          onPress={() => console.log('hello')}
+          style={{ marginTop: 16 }}
+        />
       </View>
-      <View
-        style={{ paddingTop: 37, paddingHorizontal: 16, paddingBottom: 16 }}
-      >
-        <Text style={styles.account_prompt}>Already have an account?</Text>
-        <BtnPrimary text="Next" />
-      </View>
-    </SafeAreaView>
+    </Screen>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'space-between',
     height: '100%',
-    justifyContent: 'space-between',
-    backgroundColor: '#fff',
-    marginTop: StatusBar.currentHeight,
-  },
-  input_container: {
-    maxHeight: 460,
-    justifyContent: 'space-between',
-    paddingTop: 37,
-    paddingHorizontal: 16,
-    paddingBottom: 16,
   },
   title: {
     color: colours.black,
-    marginBottom: 10,
     ...fonts.BigBold,
-  },
-  input_group: {
-    height: 300,
-    justifyContent: 'space-between',
+    marginBottom: 40,
   },
   input_title: {
-    marginBottom: 13,
     color: colours.black,
     ...fonts.MedMedium,
-  },
-  account_prompt: {
-    color: colours.primary,
     marginBottom: 10,
-    ...fonts.MedMedium,
+  },
+  input_group: {
+    marginBottom: 50,
   },
 });
 

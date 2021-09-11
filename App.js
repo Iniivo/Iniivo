@@ -46,9 +46,9 @@ export default function App() {
 
       // Screens
 
-      // <Signup />
+      <Signup />
       // <Login />
-      <RegisterPassword />
+      // <RegisterPassword />
     );
   } else {
     return <Text>Loading...</Text>;
