@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, SafeAreaView, StatusBar } from 'react-native';
+import { StyleSheet, View, Text, ScrollView } from 'react-native';
+
+import Screen from '../components/misc/Screen';
 
 import colours from '../themes/colours';
 import fonts from '../themes/fonts';
@@ -9,92 +11,73 @@ import BasicInput from '../components/atoms/Inputs/BasicInput';
 import BtnSmall from '../components/atoms/Buttons/BtnSmall';
 
 const Login = () => {
-  const [PasswordInput, setPasswordInput] = useState('');
-  const [EmailInput, setEmailInput] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.input_container}>
-        <View>
-          <Text style={styles.title}>Login</Text>
-          <Text style={styles.title2}> Welcome Back!</Text>
-        </View>
-        <View style={styles.input_group}>
-          <View>
-            <Text style={styles.input_title}>What’s your email?</Text>
+    <Screen variant={false}>
+      <View style={styles.container}>
+        <ScrollView>
+          <Text style={styles.title}>Sign Up</Text>
+          <Text style={styles.subtitle}>Welcome back!</Text>
+          <View style={styles.input_group}>
+            <Text style={styles.input_title}>What's your email?</Text>
             <BasicInput
-              placeholder="Enter your email here ..."
-              value={EmailInput}
-              onChangeText={setEmailInput}
+              placeholder="Enter your email..."
+              value={email}
+              onChangeText={setEmail}
             />
           </View>
-          <View>
-            <Text style={styles.input_title}>What’s your password?</Text>
+          <View style={styles.input_group}>
+            <Text style={styles.input_title}>What's your password?</Text>
             <BasicInput
-              placeholder="Enter your email here ..."
-              value={PasswordInput}
-              onChangeText={setPasswordInput}
+              placeholder="Enter your password..."
+              value={password}
+              onChangeText={setPassword}
             />
           </View>
-        </View>
+          <View style={styles.btn_container}>
+            <BtnSmall text="Make account" />
+            <BtnSmall text="Reset password" />
+          </View>
+        </ScrollView>
+        <BtnPrimary
+          text="Login"
+          onPress={() => console.log('hello')}
+          style={{ marginTop: 16 }}
+        />
       </View>
-      <View style={styles.buttonbuttonContainer}>
-        <View style={styles.buttonContainer}>
-          <BtnSmall style={styles.btn} text="Reset Password" />
-          <BtnSmall style={styles.btn} text="Make Account" />
-        </View>
-        <BtnPrimary style={styles.btn2} text="Next" />
-      </View>
-    </SafeAreaView>
+    </Screen>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'space-between',
     height: '100%',
-    justifyContent: 'space-between',
-    backgroundColor: '#fff',
-    marginTop: StatusBar.currentHeight,
-    marginBottom: 300,
-  },
-  input_container: {
-    maxHeight: 450,
-    justifyContent: 'space-between',
-    paddingTop: 37,
-    paddingHorizontal: 16,
-    paddingBottom: 16,
   },
   title: {
     color: colours.black,
-    marginBottom: 10,
     ...fonts.BigBold,
+    marginBottom: 10,
   },
-  title2: {
+  subtitle: {
     color: colours.primary,
-    marginBottom: 10,
-    ...fonts.MedRegular,
-  },
-  input_group: {
-    height: 300,
-    justifyContent: 'space-between',
-    marginBottom: 10,
+    ...fonts.MedMedium,
+    marginBottom: 60,
   },
   input_title: {
-    marginBottom: 13,
     color: colours.black,
     ...fonts.MedMedium,
+    marginBottom: 10,
   },
-  buttonContainer: {
+  input_group: {
+    marginBottom: 50,
+  },
+  btn_container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingBottom: 50,
-    marginBottom: 100,
-  },
-  buttonbuttonContainer: {
-    bottom: 50,
-    paddingLeft: 16,
-    paddingRight: 16,
   },
 });
 
