@@ -33,16 +33,16 @@ const VerifyEmail = () => {
           <CodeField
             ref={ref}
             {...props}
-            // Use `caretHidden={false}` when users can't paste a text value, because context menu doesn't appear
+            caretHidden={false}
             value={value}
             onChangeText={setValue}
             cellCount={6}
             rootStyle={styles.codeFieldRoot}
             keyboardType="number-pad"
             textContentType="oneTimeCode"
-            renderCell={({ index, symbol, isFocused }) => (
+            renderCell={({ idx, symbol, isFocused }) => (
               <Text
-                key={index}
+                key={idx}
                 style={[styles.cell, isFocused && styles.focusCell]}
                 onLayout={getCellOnLayoutHandler(index)}
               >

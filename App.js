@@ -8,8 +8,11 @@ import BasicInput from './components/atoms/Inputs/BasicInput';
 import SearchBar from './components/atoms/Inputs/SearchBar';
 import RadioSelect from './components/atoms/Inputs/RadioSelect';
 import FatTextInput from './components/atoms/Inputs/FatTextInput';
+
 import Signup from './screens/Signup';
 import RegisterPassword from './screens/RegisterPassword';
+import Login from './screens/Login';
+import VerifyEmail from './screens/VerifyEmail';
 
 import fonts from './themes/fonts';
 import {
@@ -18,8 +21,6 @@ import {
   DMSans_500Medium,
   DMSans_700Bold,
 } from '@expo-google-fonts/dm-sans';
-import Login from './screens/Login';
-import VerifyEmail from './screens/VerifyEmail';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -50,7 +51,7 @@ export default function App() {
       // <Signup />
       // <Login />
       // <RegisterPassword />
-      <VerifyEmail />
+      // <VerifyEmail />
     );
   } else {
     return <Text>Loading...</Text>;
