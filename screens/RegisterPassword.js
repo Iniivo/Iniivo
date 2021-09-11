@@ -24,7 +24,7 @@ const RegisterPassword = () => {
     <Screen variant={false}>
       <View style={styles.container}>
         <ScrollView>
-          <Text style={styles.title}>Sign Up</Text>
+          <Text style={styles.title}>Almost there...</Text>
           <View style={styles.input_group}>
             <Text style={styles.input_title}>
               Create a password (at least 6 characters)

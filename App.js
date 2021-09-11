@@ -19,6 +19,7 @@ import {
   DMSans_700Bold,
 } from '@expo-google-fonts/dm-sans';
 import Login from './screens/Login';
+import VerifyEmail from './screens/VerifyEmail';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -47,8 +48,9 @@ export default function App() {
       // Screens
 
       // <Signup />
-      <Login />
+      // <Login />
       // <RegisterPassword />
+      <VerifyEmail />
     );
   } else {
     return <Text>Loading...</Text>;
