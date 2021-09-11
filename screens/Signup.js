@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { StyleSheet, View, Text, SafeAreaView, StatusBar } from "react-native";
+import React, { useState } from 'react';
+import { StyleSheet, View, Text, SafeAreaView, StatusBar } from 'react-native';
 
-import colours from "../themes/colours";
-import fonts from "../themes/fonts";
+import colours from '../themes/colours';
+import fonts from '../themes/fonts';
 
-import BtnPrimary from "../components/atoms/Buttons/BtnPrimary";
-import BasicInput from "../components/atoms/Inputs/BasicInput";
+import BtnPrimary from '../components/atoms/Buttons/BtnPrimary';
+import BasicInput from '../components/atoms/Inputs/BasicInput';
 
 const Signup = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
 
   return (
     <SafeAreaView style={styles.container}>
@@ -61,14 +61,14 @@ const Signup = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: "100%",
-    justifyContent: "space-between",
-    backgroundColor: "#fff",
+    height: '100%',
+    justifyContent: 'space-between',
+    backgroundColor: '#fff',
     marginTop: StatusBar.currentHeight,
   },
   input_container: {
-    minHeight: 450,
-    justifyContent: "space-between",
+    maxHeight: 460,
+    justifyContent: 'space-between',
     paddingTop: 37,
     paddingHorizontal: 16,
     paddingBottom: 16,
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   },
   input_group: {
     height: 300,
-    justifyContent: "space-between",
+    justifyContent: 'space-between',
   },
   input_title: {
     marginBottom: 13,

@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     marginBottom: 300,
   },
   input_container: {
-    minHeight: 450,
+    maxHeight: 450,
     justifyContent: 'space-between',
     paddingTop: 37,
     paddingHorizontal: 16,
@@ -85,14 +85,12 @@ const styles = StyleSheet.create({
     color: colours.black,
     ...fonts.MedMedium,
   },
-
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingBottom: 50,
     marginBottom: 100,
   },
-
   buttonbuttonContainer: {
     bottom: 50,
     paddingLeft: 16,

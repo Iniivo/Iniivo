@@ -3,10 +3,16 @@ import { StyleSheet, View, TextInput } from 'react-native';
 import colours from '../../../themes/colours';
 import fonts from '../../../themes/fonts';
 
-const BasicInput = ({ value, onChange }) => {
-  <View style={styles.container}>
-    <TextInput style={styles.text_input} value={value} onChange={onChange} />
-  </View>;
+const BasicInput = ({ value, onChangeText }) => {
+  return (
+    <View style={styles.container}>
+      <TextInput
+        style={styles.text_input}
+        value={value}
+        onChangeText={onChangeText}
+      />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
