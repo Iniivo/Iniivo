@@ -13,6 +13,8 @@ import RegisterPassword from './screens/RegisterPassword';
 import Login from './screens/Login'
 import ResetPassword from './screens/ResetPassword';
 import ResetEmail from './screens/ResetEmail';
+import AccountPage from './screens/AccountPage';
+
 
 import fonts from './themes/fonts';
 import {
@@ -52,7 +54,7 @@ export default function App() {
       // <Signup />
       // <Login />
       // <RegisterPassword />
-      <ResetEmail/>
+      <AccountPage/>
     );
   } else {
     return <Text>Loading...</Text>;
