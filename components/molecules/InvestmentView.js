@@ -4,9 +4,9 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import fonts from '../../themes/fonts';
 import colours from '../../themes/colours';
 
-const InvestmentView = ({ data }) => {
+const InvestmentView = ({ data, style }) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={[styles.container, style]}>
       <Image style={styles.image} source={{ uri: data.image_url }} />
       <View style={styles.text_container}>
         <View>
