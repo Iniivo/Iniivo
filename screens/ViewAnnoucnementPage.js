@@ -13,9 +13,9 @@ const data = {
     announcementTime: 'Date.now',
     realtorName: 'Adam Mulugeta',
     houseAddress: '330 Bobolink Ridge',
-    rennovationsCosts: 94,
-    selliingPrice: 120,
-    profit: 26
+    rennovationsCosts: '94k',
+    selliingPrice: '120k',
+    profit: '26k'
 };
 
 
@@ -42,7 +42,7 @@ const ViewAnnouncementPage = () => {
                     <View style={styles.messageDivider}/>
                     <Text style={styles.message}> This is the message (charcter limit should be applied)</Text>
                     <View style={styles.messageDivider}/>
-                    <BarGraph bar1Data= {data.rennovationsCosts}/>
+                    <BarGraph/>
 
                         
                 </ScrollView>
