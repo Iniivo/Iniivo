@@ -14,6 +14,8 @@ import Login from './screens/Login'
 import ResetPassword from './screens/ResetPassword';
 import ResetEmail from './screens/ResetEmail';
 import AccountPage from './screens/AccountPage';
+import ViewAnnouncementPage from './screens/ViewAnnoucnementPage';
+import BarGraph from './components/barGraph';
 
 
 import fonts from './themes/fonts';
@@ -54,7 +56,10 @@ export default function App() {
       // <Signup />
       // <Login />
       // <RegisterPassword />
-      <AccountPage/>
+      // <AccountPage/>
+      <ViewAnnouncementPage />
+
+
     );
   } else {
     return <Text>Loading...</Text>;

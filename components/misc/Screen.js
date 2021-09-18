@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     height: '100%',
     paddingHorizontal: 16,
     paddingTop: StatusBar.currentHeight + 37,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffff',
   },
   appbar: {
     paddingBottom: 16,
