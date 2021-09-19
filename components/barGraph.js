@@ -26,9 +26,17 @@ const BarGraph = () => {
                         <Text style={{...fonts.SmallRegular}}> 26k </Text>
                         <View style={styles.bargraphBar3}/>
                     </View>
+                    
                 </View>
             </View>
-            <View style={{height:2, width: 285, backgroundColor: 'black'}}/>
+            <View style={{height:2, backgroundColor: 'black', marginBottom: 7, alignItems: 'center'}}/>
+            
+            <View style={styles.bargraphInfoContainer}>
+                <Text  style={styles.bargraphLabel}>Renovation Costs</Text>
+                <Text style={styles.bargraphLabel}> Predicted selling price </Text>
+                <Text style={styles.bargraphLabel}> Predicted profit </Text>
+            </View>
+
             
              
 
@@ -68,11 +76,12 @@ const styles = StyleSheet.create ({
     },
 
     bargraphTextBarContainer: {
-        alignItems: 'center'
+        alignItems: 'center',
+        width: 100,
+
     },
 
     
-
     bargraphBar1: {
         width: 60,
         height: 99,
@@ -99,6 +108,13 @@ const styles = StyleSheet.create ({
         borderColor: '#438856' 
 
     },
+
+    bargraphLabel: {
+        color: colours.black,
+        ...fonts.SmallRegular,
+        textAlign: 'center',
+        flex: 1,
+    }
     
 });
 
