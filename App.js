@@ -16,7 +16,8 @@ import ResetEmail from './screens/ResetEmail';
 import AccountPage from './screens/AccountPage';
 import ViewAnnouncementPage from './screens/ViewAnnoucnementPage';
 import BarGraph from './components/barGraph';
-import AddFunds from './screens/AddFunds'
+import AddFunds from './screens/AddFunds';
+import WithdrawFunds from './screens/WithdrawFunds';
 
 
 import fonts from './themes/fonts';
@@ -59,7 +60,8 @@ export default function App() {
       // <RegisterPassword />
       // <AccountPage/>
       // <ViewAnnouncementPage />
-      <AddFunds/>
+      // <AddFunds/>
+      <WithdrawFunds/>
 
 
     );

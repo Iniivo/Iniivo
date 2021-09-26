@@ -23,6 +23,7 @@ const data = {
 
 const AddFunds = () => {
   const [Money, setMoney] = useState('');
+  const [Pressed, setPressed] = useState(false);
 
 
 
@@ -41,15 +42,15 @@ const AddFunds = () => {
 
             <Text style={styles.subtitle}>Which account would you like to charge?</Text>
             <View style={{marginBottom: 45}}>
-              <RadioSelect  text={data.account1}/>
+              <RadioSelect  text={data.account1} isSelected={Pressed} onPress={() => setPressed(true)}/>
               </View>
 
               <View style={{marginBottom: 45}}>
-                  <RadioSelect  text={data.account2}/>
+                  <RadioSelect  text={data.account2} isSelected={Pressed} onPress={() => setPressed(true)}/>
               </View>
 
               <View style={{marginBottom: 45}}>
-                  <RadioSelect  text={data.account3}/>
+                  <RadioSelect  text={data.account3} isSelected={Pressed} onPress={() => setPressed(true)}/>
               </View>
 
         </ScrollView>
