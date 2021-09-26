@@ -1,3 +1,5 @@
+// Arrow redericting to previous page still needs to be added
+
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, ScrollView, Platform } from 'react-native';
 
