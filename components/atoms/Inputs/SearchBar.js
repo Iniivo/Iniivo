@@ -4,9 +4,11 @@ import colours from '../../../themes/colours';
 import fonts from '../../../themes/fonts';
 
 const SearchBar = ({ value, onChange }) => {
+  return (
   <View style={styles.container}>
     <TextInput style={styles.text_input} value={value} onChange={onChange} />
-  </View>;
+  </View>
+  )
 };
 
 const styles = StyleSheet.create({

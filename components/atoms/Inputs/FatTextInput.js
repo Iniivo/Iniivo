@@ -3,15 +3,17 @@ import { StyleSheet, View, TextInput, Platform } from 'react-native';
 import colours from '../../../themes/colours';
 
 const FatTextInput = ({ value, onChange }) => {
+  return (
   <View style={styles.container}>
     <TextInput
-      keyboardType={Platform.OS === 'android' ? 'numeric' : 'number-pad'}
-      style={styles.text_input}
-      value={value}
-      onChange={onChange}
+    keyboardType={Platform.OS === 'android' ? 'numeric' : 'number-pad'}
+    style={styles.text_input}
+    value={value}
+    onChange={onChange}
     />
-  </View>;
-};
+    </View>
+    );
+  };
 
 const styles = StyleSheet.create({
   container: {

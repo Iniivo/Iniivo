@@ -5,6 +5,7 @@ import opacities from '../../../themes/opacities';
 import fonts from '../../../themes/fonts';
 
 const RadioSelect = ({ text, style, isSelected }) => {
+  return (
   <TouchableOpacity
     activeOpacity={opacities.radioOpacity}
     style={[styles.container, style]}
@@ -13,7 +14,8 @@ const RadioSelect = ({ text, style, isSelected }) => {
     <View style={styles.circle_outer}>
       {isSelected && <View style={styles.circle_inner} />}
     </View>
-  </TouchableOpacity>;
+  </TouchableOpacity>
+  );
 };
 
 const styles = StyleSheet.create({
