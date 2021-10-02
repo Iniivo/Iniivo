@@ -18,6 +18,8 @@ import ViewAnnouncementPage from './screens/ViewAnnoucnementPage';
 import BarGraph from './components/barGraph';
 import AddFunds from './screens/AddFunds';
 import WithdrawFunds from './screens/WithdrawFunds';
+import NewsTracker from './screens/NewsTracker';
+import SharePurchasePage from './screens/SharePurchasePage';
 
 
 import fonts from './themes/fonts';
@@ -61,7 +63,11 @@ export default function App() {
       // <AccountPage/>
       // <ViewAnnouncementPage />
       // <AddFunds/>
-      <WithdrawFunds/>
+      // <WithdrawFunds/>
+      // <NewsTracker/>
+      <SharePurchasePage/>
+
+
 
 
     );
