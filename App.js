@@ -30,6 +30,7 @@ import {
   DMSans_700Bold,
 } from '@expo-google-fonts/dm-sans';
 import VerifyEmail from './screens/VerifyEmail';
+import InvestmentPage from './screens/InvestementPage';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -65,7 +66,8 @@ export default function App() {
       // <AddFunds/>
       // <WithdrawFunds/>
       // <NewsTracker/>
-      <SharePurchasePage/>
+      // <SharePurchasePage/>
+      <InvestmentPage/>
 
 
 

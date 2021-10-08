@@ -47,6 +47,11 @@ const fonts = {
     fontSize: 10,
     fontFamily: 'DMSans_400Regular',
   },
+
+  DevelopmentExtra: {
+    fontSize: 20,
+    fontFamily: 'DMSans_700Bold',
+  },
 };
 
 export default fonts;
