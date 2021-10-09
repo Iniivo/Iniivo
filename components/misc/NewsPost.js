@@ -21,7 +21,7 @@ const NewsPost = () => {
 {/* Insert Image of post here */}
                 <View style={styles.picture}></View>
                 
-                <View style={{flexDirection: 'column', width:178, height: 54 }}>
+                <View style={styles.textContainer}>
                 <Text style={styles.title}>liquam risus ex, bibendum ac metus at, auctor facilisis urna.</Text>
                 
                 <Text style={styles.name}>Mathias </Text>
@@ -49,6 +49,10 @@ const styles = StyleSheet.create ({
         ...fonts.SmallBold,
         marginBottom: 9,
     },
+
+    textContainer: {flexDirection: 'column', 
+    width:178, 
+    height: 54 },
 
     name: {
         color: colours.grey,
