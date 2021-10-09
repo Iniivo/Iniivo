@@ -31,6 +31,7 @@ import {
 } from '@expo-google-fonts/dm-sans';
 import VerifyEmail from './screens/VerifyEmail';
 import InvestmentPage from './screens/InvestementPage';
+import DevelopmentAnnouncement from './screens/DevelopmentAnnouncement';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -67,7 +68,8 @@ export default function App() {
       // <WithdrawFunds/>
       // <NewsTracker/>
       // <SharePurchasePage/>
-      <InvestmentPage/>
+      // <InvestmentPage/>
+      <DevelopmentAnnouncement/>
 
 
 

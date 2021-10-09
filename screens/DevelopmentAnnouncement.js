@@ -9,13 +9,15 @@ import fonts from '../themes/fonts';
 import BtnPrimary from '../components/atoms/Buttons/BtnPrimary';
 import BasicInput from '../components/atoms/Inputs/BasicInput';
 import Investment from '../components/misc/Investment';
+import HouseDevelopment from '../components/misc/HouseDevelopment';
 
 
 const data = {
-    numOfPositions: '5'
+    numOfAnnouncements: '5',
+    house: '330 Bobolink Ridge'
 
 }
-const InvestmentPage = () => {
+const DevelopmentAnnouncement = () => {
 
 
 
@@ -23,14 +25,14 @@ const InvestmentPage = () => {
     <Screen variant={false}>
       <View style={styles.container}>
         <ScrollView>
-          <Text style={styles.title}>Investments</Text>
-          <Text style={styles.subtitle}>{data.numOfPositions} positions </Text>
-{/* Add number of investments based on {numOfPositions}          */}
-          <Investment/>
-          <Investment/>
-          <Investment/>
-          <Investment/>
-          <Investment/>
+          <Text style={styles.title}>{data.house}</Text>
+          <Text style={styles.subtitle}>{data.numOfAnnouncements} development announcements </Text>
+{/* Add number of investments based on {numOfAnnouncment}          */}
+          <HouseDevelopment/>
+          <HouseDevelopment/>
+          <HouseDevelopment/>
+          <HouseDevelopment/>
+          <HouseDevelopment/>
 
 
         </ScrollView>
@@ -46,9 +48,9 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   title: {
-    color: colours.black,
+    color: colours.primary,
     ...fonts.BigBold,
-    marginBottom: 8,
+    marginBottom: 10,
   },
 
   subtitle: {
@@ -58,6 +60,7 @@ const styles = StyleSheet.create({
 
   },
 
+
 });
 
-export default InvestmentPage;
+export default DevelopmentAnnouncement;

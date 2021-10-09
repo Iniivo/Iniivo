@@ -52,6 +52,11 @@ const fonts = {
     fontSize: 20,
     fontFamily: 'DMSans_700Bold',
   },
+
+  DevelopmentAnnoucmentMessageExtra: {
+    fontSize: 12,
+    fontFamily: 'DMSans_400Regular'
+  }
 };
 
 export default fonts;
