@@ -30,7 +30,7 @@ const HouseDevelopment = () => {
                 
                 <Text style={styles.author}>{data.author} -{data.time} </Text>
                 <Text numberOfLines={5} style={styles.message}>{data.message}</Text>
-{/* Font is not same size as on wireframe due to the lack of space*/}
+
         
                 
                 </View>
